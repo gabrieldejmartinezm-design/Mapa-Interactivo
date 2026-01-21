@@ -11,27 +11,27 @@ var wms_layers = [];
                 url: 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}'
             })
         });
-var format_MapaTuristicoInteractivo_1 = new ol.format.GeoJSON();
-var features_MapaTuristicoInteractivo_1 = format_MapaTuristicoInteractivo_1.readFeatures(json_MapaTuristicoInteractivo_1, 
+var format_mapa_1 = new ol.format.GeoJSON();
+var features_mapa_1 = format_mapa_1.readFeatures(json_mapa_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_MapaTuristicoInteractivo_1 = new ol.source.Vector({
+var jsonSource_mapa_1 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_MapaTuristicoInteractivo_1.addFeatures(features_MapaTuristicoInteractivo_1);
-var lyr_MapaTuristicoInteractivo_1 = new ol.layer.Vector({
+jsonSource_mapa_1.addFeatures(features_mapa_1);
+var lyr_mapa_1 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_MapaTuristicoInteractivo_1, 
-                style: style_MapaTuristicoInteractivo_1,
-                popuplayertitle: 'Mapa Turistico Interactivo',
+                source:jsonSource_mapa_1, 
+                style: style_mapa_1,
+                popuplayertitle: 'mapa',
                 interactive: true,
-                title: '<img src="styles/legend/MapaTuristicoInteractivo_1.png" /> Mapa Turistico Interactivo'
+                title: '<img src="styles/legend/mapa_1.png" /> mapa'
             });
 
-lyr_GoogleSatellite_0.setVisible(true);lyr_MapaTuristicoInteractivo_1.setVisible(true);
-var layersList = [lyr_GoogleSatellite_0,lyr_MapaTuristicoInteractivo_1];
-lyr_MapaTuristicoInteractivo_1.set('fieldAliases', {'Atractivo': 'Atractivo', 'Tipo': 'Tipo', 'Coordenada': 'Coordenada', 'UTM ( E)': 'UTM ( E)', 'UTM (N)': 'UTM (N)', 'Dirección': 'Dirección', 'Municipio': 'Municipio', 'Estado': 'Estado', 'Descripci�': 'Descripci�', 'Sector Ind': 'Sector Ind', 'Parque Nac': 'Parque Nac', 'Servicios': 'Servicios', 'Ente Regul': 'Ente Regul', 'Registro F': 'Registro F', });
-lyr_MapaTuristicoInteractivo_1.set('fieldImages', {'Atractivo': 'TextEdit', 'Tipo': 'TextEdit', 'Coordenada': 'TextEdit', 'UTM ( E)': 'TextEdit', 'UTM (N)': 'TextEdit', 'Dirección': 'TextEdit', 'Municipio': 'TextEdit', 'Estado': 'TextEdit', 'Descripci�': 'TextEdit', 'Sector Ind': 'TextEdit', 'Parque Nac': 'TextEdit', 'Servicios': 'TextEdit', 'Ente Regul': 'TextEdit', 'Registro F': 'ExternalResource', });
-lyr_MapaTuristicoInteractivo_1.set('fieldLabels', {'Atractivo': 'inline label - always visible', 'Tipo': 'inline label - always visible', 'Coordenada': 'inline label - always visible', 'UTM ( E)': 'inline label - always visible', 'UTM (N)': 'inline label - always visible', 'Dirección': 'inline label - always visible', 'Municipio': 'inline label - always visible', 'Estado': 'inline label - always visible', 'Descripci�': 'inline label - always visible', 'Sector Ind': 'inline label - always visible', 'Parque Nac': 'inline label - always visible', 'Servicios': 'inline label - always visible', 'Ente Regul': 'inline label - always visible', 'Registro F': 'inline label - always visible', });
-lyr_MapaTuristicoInteractivo_1.on('precompose', function(evt) {
+lyr_GoogleSatellite_0.setVisible(true);lyr_mapa_1.setVisible(true);
+var layersList = [lyr_GoogleSatellite_0,lyr_mapa_1];
+lyr_mapa_1.set('fieldAliases', {'Atractivo': 'Atractivo', 'Tipo': 'Tipo', 'Coordenada': 'Coordenada', 'UTM ( E)': 'UTM ( E)', 'UTM (N)': 'UTM (N)', 'Dirección': 'Dirección', 'Municipio': 'Municipio', 'Estado': 'Estado', 'Descripci�': 'Descripci�', 'Sector Ind': 'Sector Ind', 'Parque Nac': 'Parque Nac', 'Servicios': 'Servicios', 'Ente Regul': 'Ente Regul', 'Registro F': 'Registro F', });
+lyr_mapa_1.set('fieldImages', {'Atractivo': 'TextEdit', 'Tipo': 'TextEdit', 'Coordenada': 'TextEdit', 'UTM ( E)': 'TextEdit', 'UTM (N)': 'TextEdit', 'Dirección': 'TextEdit', 'Municipio': 'TextEdit', 'Estado': 'TextEdit', 'Descripci�': 'TextEdit', 'Sector Ind': 'TextEdit', 'Parque Nac': 'TextEdit', 'Servicios': 'TextEdit', 'Ente Regul': 'TextEdit', 'Registro F': 'ExternalResource', });
+lyr_mapa_1.set('fieldLabels', {'Atractivo': 'inline label - visible with data', 'Tipo': 'inline label - visible with data', 'Coordenada': 'inline label - visible with data', 'UTM ( E)': 'inline label - visible with data', 'UTM (N)': 'inline label - visible with data', 'Dirección': 'inline label - visible with data', 'Municipio': 'inline label - visible with data', 'Estado': 'inline label - visible with data', 'Descripci�': 'inline label - visible with data', 'Sector Ind': 'inline label - visible with data', 'Parque Nac': 'inline label - visible with data', 'Servicios': 'inline label - visible with data', 'Ente Regul': 'inline label - visible with data', 'Registro F': 'inline label - visible with data', });
+lyr_mapa_1.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
